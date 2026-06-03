@@ -1,0 +1,17 @@
+# Environment variables (contains credentials)
+.env
+backend/.env
+
+# Dependencies
+node_modules/
+backend/node_modules/
+frontend/node_modules/
+
+# Local databases and spreadsheet exports
+database.sqlite*
+backend/database.sqlite*
+bills_database.xlsx
+backend/bills_database.xlsx
+
+# Production build output
+frontend/dist/

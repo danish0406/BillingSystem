@@ -1,0 +1,26 @@
+CREATE TABLE IF NOT EXISTS templates (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  business_name VARCHAR(255) NOT NULL,
+  business_address TEXT,
+  business_contact VARCHAR(255),
+  footer_notes TEXT,
+  tax_rate DOUBLE DEFAULT 0.0,
+  currency VARCHAR(50) DEFAULT '₹',
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS bills (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  bill_number INT UNIQUE NOT NULL,
+  customer_name VARCHAR(255),
+  customer_address TEXT,
+  customer_phone VARCHAR(255),
+  subtotal DOUBLE NOT NULL,
+  tax_amount DOUBLE NOT NULL,
+  discount_amount DOUBLE NOT NULL,
+  grand_total DOUBLE NOT NULL,
+  items LONGTEXT NOT NULL,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
