@@ -38,11 +38,11 @@ const BillDetail = () => {
   };
 
   const handleExcel = () => {
-    window.open(`http://localhost:3000/api/bill/${id}/export/excel`);
+    window.open(`/api/bill/${id}/export/excel`);
   };
 
   const handlePDF = () => {
-    window.open(`http://localhost:3000/api/bill/${id}/export/pdf`);
+    window.open(`/api/bill/${id}/export/pdf`);
   };
 
   if (loading) return <div>Loading...</div>;

@@ -179,12 +179,12 @@ const NewBill = () => {
 
   const handleExcel = () => {
     if (!savedBillId) return;
-    window.open(`http://localhost:3000/api/bill/${savedBillId}/export/excel`);
+    window.open(`/api/bill/${savedBillId}/export/excel`);
   };
 
   const handlePDF = () => {
     if (!savedBillId) return;
-    window.open(`http://localhost:3000/api/bill/${savedBillId}/export/pdf`);
+    window.open(`/api/bill/${savedBillId}/export/pdf`);
   };
 
   const resetForm = () => {
